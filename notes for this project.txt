@@ -1,0 +1,100 @@
+            <svg>
+              <use href="src/img/icons.svg#icon-smile"></use>
+            </svg>
+
+
+          <svg>
+            <use href="src/img/icons.svg#icon-loader"></use>
+          </svg>
+
+
+
+recipeContainer.innerHTML = '';
+
+
+In parcel we can import even all kinds of static assets like images, svg icons, not only js modules(programming files)
+//This is used when js will not be able to find the assets we link in the js file(when dynamically adding html to the html file) in the dist folder because the names in the dist folder are different. So, we should use names in the dist folder. Parcel will do it for us.
+
+
+animation: rotate(rotate is created manulaly by him using keyframes) for spinner
+
+After we first time bundle our project using parcel, it bundles just the necessary files into one(programming files) and put them into a dist folder. In the same step it also transpiles (not very recent syntax: for these we have to use things like [import 'core-js/stable';  import 'regenerator-runtime/runtime'; for..I dont remember..classes and promises I guess]) the programming files. While making further changes to the scripts, if we have parcel running in the background, in vs code, parcel automatically rebuilds/bundles them continuously. We should not disturb any thing in the dist folder, and just work in the source files, the necessary changes are made automatically to the dist folder
+
+
+The url of the page changed when clicked on a link with href attribute = something. So, when I want to do something based on the clicked upon item, I neeed not store them in an array and search for the item that is clicked but siply listen to the change in the url and obtain the info about the item that is clicked(for clicking on a recipe)
+
+window.addEventListener('hashchange', showrecipe);//for hash change in the same page
+window.addEventListener('load', showrecipe);//for when opened a new tab with the same url
+(try to collect all the events and functions of the dom API)
+
+window.location.hash;
+
+Sometimes some strange error shows up because we missed a ';' to the previous line.(If the error has 'intermediate' in it.[in firefox])
+
+
+*******************Why architecturing the code? different architecture patterns; Frameworks like react, angular, viu, sevelt etc
+components of any architecture. MVC architecture. Using MVC architecture for our project********** Tremendously simplifies and clarifies the tasks.
+
+APIs are mostly used for data. Libraries(modules) are mostly used for a desired functionality implemented in js. Libraries need to installed by npm and imported into our scripts
+
+The most important aspect of building an application is its organization above all. Apart from already mentioned ways for it, helpers and config files could be used. Inheritance, moduling separate tasks and importing exporting etc
+
+Very much prone to making the mistake of not consuming the promise an async function is going to return(using await in the calling function).
+Remember that even if inside the called async function a promise failed, the whole aync function is still fulfilled. To avoid that rethrow the error in the called function
+
+Publisher-subscriber pattern to more perfectly implement the MVC architecture (Watch. Not so obvious. Standard thing to know)(passing functions to the functions). Before this, I think the eventhandlers to dom elements were present in the controller itself.
+
+Remember, we can export anyyyyy value, even a class apart from object. It is only the ignorance and not acknowledging that it could work blocks your way to easy, clean and efficient code. So, it is important to try new things and acknowledge that there are no real boundaries until you make it work and not just try to stick to what is in your limited memory. Because you simply don't have an idea that it could be done in that way.
+
+Not only doc.quSel('.class') we also can select an element inside any element by element.quSel('.class')
+
+
+Do not try to understand OOP in javascript from the understanding of traditional OOP. An independent, prototype based (inheritance in ES6 classes and all other aspects) explanation is provided for everything in Javascript for classes, so learn this OOP as independent from that OOP. 
+
+
+Slice works not only on strings but also on any array
+
+It is never the browser not working properly but only you who didn't figure out what the error is correctly
+
+Math.ceil()
+
+**event delegation. el.target.closest(); used in mapty and also forkify
+
+data-* ==> data attribute to an element; dataset.*
+
+
+DOM updating algorithm for just updating some places but not the whole view; .isEqualNode(curEl). update() method he created(I didn't listen properly). Watch Advanced DOM section. difference b/w node and an element. nodevalue() and many more missed things from Adv dom section
+
+querySelectorAll('*');
+
+Array.from();
+
+Can we add an event handler for an element that does not exist initially? (Said no in the lecture..? Search and know) If no, use event delegation. I think we can add if it exists but is not displayed.
+
+some() method on the array
+
+splice() method in array
+
+formdata bowser aoi to get the whole form data at once
+
+Object.fromEntries(); to convert an array into an object. Opposite of Entries method on the arrays
+
+
+Unless you revise evryth\ing, you will unnecessarily over work for everything instead of using already existing higher functions for that task in javascript. Atleast remember that there must, in most cases exeist a higher function for the task you want to do on like arrays and objects and strings and more. And also watch unwatched sections. Remember to utilise the vast existing simplifications of the language. That is the point of learning beyond just the fundamentals in javascript. destructuring, spread, rest, array methods, strings etc etc etc
+
+str.startswith('abcd') //string method(already discussed before while strings. Forgot)
+str.split('a character');
+
+
+{quantity, unit, description} is an object literal if those 3 inside are variables and have som value as per the enhanced object literals
+
+
+sending JSON method in helper.js Sending data using fetch function
+
+API to change the ID in the URL; window.history.pushState(); //can use it for other purposes like going back and forth in the browser
+
+***Writing documentation. JSdocs. *********special commenting in vs code
+
+********deploying the website. Next section
+
+
