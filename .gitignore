@@ -2,3 +2,5 @@ node_modules
 dist
 .parcel-cache
 .DS_store
+.gitignore
+notes for this project.txt
